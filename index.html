@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOSbot — Catch TOS strikes before the platform does</title>
+  <meta name="description" content="TOSbot watches your social posts, checks them against each platform's Terms of Service, and pings your phone before a risky post becomes a strike, shadowban, or suspension. Join the private beta waitlist — planned around $4.99/mo.">
+  <meta property="og:title" content="TOSbot — Catch TOS strikes before the platform does">
+  <meta property="og:description" content="One heated comment can get you shadowbanned. TOSbot flags risky posts against platform Terms of Service and alerts your phone — before enforcement finds them. Private beta waitlist open.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="TOSbot home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="bm" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#4338ca"/>
+            </linearGradient>
+          </defs>
+          <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#bm)"/>
+          <path d="M32 13 L49 20.5 V32 C49 42.5 42 49.8 32 53 C22 49.8 15 42.5 15 32 V20.5 Z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/>
+          <path d="M24.5 32.5 L30 38 L40 26.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        TOSbot
+      </a>
+      <ul class="nav-links">
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#walkthrough">Screenshots</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta js-waitlist-cta" href="#waitlist">Join the waitlist</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+    <nav class="mobile-menu" aria-label="Mobile">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#walkthrough">Screenshots</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary js-waitlist-cta" href="#waitlist">Join the waitlist</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Your account's early-warning system</span>
+          <h1>Catch TOS strikes before the platform does.</h1>
+          <p class="hero-sub">
+            One heated comment can quietly shadowban you. TOSbot watches your posts,
+            checks them against each platform's Terms of Service, and pings your phone
+            the moment something looks risky — so you can fix it before enforcement finds it.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg js-waitlist-cta" href="#waitlist">Join the private beta waitlist</a>
+            <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
+          </div>
+          <p class="hero-note">
+            <strong>Not launched yet.</strong> Get notified when TOSbot opens. Planned around $4.99/month after a free trial.
+          </p>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-visual-wrap">
+            <!-- Phone mockup: lock screen push notification -->
+            <div class="phone" role="img" aria-label="iPhone lock screen showing a TOSbot push notification warning that a recent reply may violate X's abusive behavior policy">
+              <div class="phone-screen screen-lock">
+                <div class="phone-island"></div>
+                <div class="lock-clock">
+                  <div class="lock-date">Friday, July 24</div>
+                  <div class="lock-time">9:41</div>
+                </div>
+                <div class="lock-notif">
+                  <div class="lock-notif-head">
+                    <svg class="notif-app-icon" viewBox="0 0 64 64" aria-hidden="true">
+                      <rect x="4" y="4" width="56" height="56" rx="14" fill="#4f46e5"/>
+                      <path d="M32 13 L49 20.5 V32 C49 42.5 42 49.8 32 53 C22 49.8 15 42.5 15 32 V20.5 Z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/>
+                      <path d="M24.5 32.5 L30 38 L40 26.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="lock-notif-app">TOSbot</span>
+                    <span class="lock-notif-time">now</span>
+                  </div>
+                  <div class="lock-notif-title">⚠️ TOS risk detected on X</div>
+                  <p class="lock-notif-body">
+                    Your reply from 12 min ago may violate X's Abusive Behavior policy.
+                    Tap to review before it draws a strike.
+                  </p>
+                </div>
+                <div class="lock-hint">
+                  swipe up to open
+                  <div class="lock-bar"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-float hero-float-1"><span class="ok-dot"></span> 4 platforms monitored</div>
+            <div class="hero-float hero-float-2"><span class="ok-dot"></span> Scanned 12 posts today · all clear</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Trust strip ============ -->
+    <div class="trust-strip">
+      <div class="container trust-inner">
+        <span>Monitors posts on</span>
+        <span class="sep">•</span>
+        <span>X / Twitter</span>
+        <span class="sep">•</span>
+        <span>Instagram</span>
+        <span class="sep">•</span>
+        <span>TikTok</span>
+        <span class="sep">•</span>
+        <span>YouTube</span>
+        <span class="sep">•</span>
+        <span>More coming</span>
+      </div>
+    </div>
+
+    <!-- ============ Problem ============ -->
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The problem</span>
+          <h2>Platforms don't warn you. They just act.</h2>
+          <p>Visibility limits, reach throttling, strikes, suspensions — most people find out weeks later, when engagement has already cratered. By then it's too late to simply delete the post.</p>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-stat">Silent</div>
+            <h3>Shadowbans are invisible</h3>
+            <p>Platforms rarely tell you when they limit your visibility. Your posts just stop reaching people, and you're left guessing why.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-stat">One post</div>
+            <h3>That's all it takes</h3>
+            <p>A single sarcastic reply written in a hot moment can trip automated moderation — even when you didn't mean any harm.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-stat">100+ pages</div>
+            <h3>Nobody reads the TOS</h3>
+            <p>Every platform's rules are long, vague, and constantly changing. You shouldn't need a law degree to post a joke.</p>
+          </div>
+        </div>
+        <div class="origin-note">
+          <p><strong>Why we built this:</strong> our founder fired off one angry joke in a reply — the kind everyone types and forgets. X quietly limited his account's visibility for it. No warning, no appeal that mattered, just a slow realization that nobody was seeing his posts anymore. TOSbot exists so a single heated moment never costs you your reach again.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ How it works ============ -->
+    <section class="section section-soft" id="how">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How it works</span>
+          <h2>Post like normal. We'll watch your back.</h2>
+          <p>TOSbot runs quietly in the background. You only hear from it when something actually needs your attention.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Connect your accounts</h3>
+            <p>Link X, Instagram, TikTok, or YouTube in about a minute. TOSbot only requests read access to your own public posts — never your DMs, never posting rights.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>We check every post against the rules</h3>
+            <p>Each new post and reply is compared to the current Terms of Service and enforcement patterns for that platform — the actual rules, kept up to date as they change.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Get pinged before it becomes a strike</h3>
+            <p>If a post risks a strike, visibility limit, or ban, your phone buzzes. Tap the notification to see exactly which post, which rule, and what to do about it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Features ============ -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Features</span>
+          <h2>Small app. Serious protection.</h2>
+          <p>Everything you need to keep your accounts in good standing — nothing you don't.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 L20 5.5 V12 c0 5-3.5 8.5-8 10 -4.5-1.5-8-5-8-10 V5.5 Z"/></svg>
+            </div>
+            <h3>Real-time post scanning</h3>
+            <p>New posts and replies are checked within minutes of going live — the window where deleting still helps most.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+            </div>
+            <h3>Instant push alerts</h3>
+            <p>A clear, calm phone notification the moment something looks risky. No dashboards to babysit, no daily digest noise.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
+            </div>
+            <h3>The exact rule, quoted</h3>
+            <p>Every alert cites the specific TOS clause your post may violate — in plain English, with the platform's own wording alongside.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+            </div>
+            <h3>One-tap fix</h3>
+            <p>Jump straight to the flagged post, or delete it right from the app when the platform allows it. Crisis averted in seconds.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg>
+            </div>
+            <h3>Rules that stay current</h3>
+            <p>Platforms rewrite their policies constantly. TOSbot tracks the changes so a post that was fine last month doesn't ambush you today.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3>Private by design</h3>
+            <p>Read-only access to your own public posts. We never post on your behalf, never touch your DMs, and never sell your data.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Screenshot walkthrough ============ -->
+    <section class="section section-soft" id="walkthrough">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">See it in action</span>
+          <h2>From "uh oh" to handled in under a minute.</h2>
+          <p>Here's exactly what happens when TOSbot spots a risky post.</p>
+        </div>
+
+        <div class="walkthrough">
+          <!-- Walk 1: notification -->
+          <div class="walk-item">
+            <div class="walk-copy">
+              <span class="eyebrow">Step 1 · The alert</span>
+              <h3>A calm heads-up, right on your lock screen</h3>
+              <p>You posted something 12 minutes ago that pattern-matches a policy the platform actually enforces. TOSbot doesn't panic you — it just tells you what's up.</p>
+              <ul>
+                <li>Names the platform and the policy area at a glance</li>
+                <li>Arrives within minutes, while deleting still helps</li>
+                <li>No alert spam — only genuine risks make your phone buzz</li>
+              </ul>
+            </div>
+            <div class="walk-phone">
+              <div class="phone" role="img" aria-label="iPhone lock screen with TOSbot notification: TOS risk detected on X, tap to review">
+                <div class="phone-screen screen-lock">
+                  <div class="phone-island"></div>
+                  <div class="lock-clock">
+                    <div class="lock-date">Friday, July 24</div>
+                    <div class="lock-time">9:41</div>
+                  </div>
+                  <div class="lock-notif">
+                    <div class="lock-notif-head">
+                      <svg class="notif-app-icon" viewBox="0 0 64 64" aria-hidden="true">
+                        <rect x="4" y="4" width="56" height="56" rx="14" fill="#4f46e5"/>
+                        <path d="M32 13 L49 20.5 V32 C49 42.5 42 49.8 32 53 C22 49.8 15 42.5 15 32 V20.5 Z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/>
+                        <path d="M24.5 32.5 L30 38 L40 26.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span class="lock-notif-app">TOSbot</span>
+                      <span class="lock-notif-time">now</span>
+                    </div>
+                    <div class="lock-notif-title">⚠️ TOS risk detected on X</div>
+                    <p class="lock-notif-body">
+                      Your reply from 12 min ago may violate X's Abusive Behavior policy.
+                      Tap to review before it draws a strike.
+                    </p>
+                  </div>
+                  <div class="lock-hint">
+                    swipe up to open
+                    <div class="lock-bar"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Walk 2: detail screen -->
+          <div class="walk-item reverse">
+            <div class="walk-copy">
+              <span class="eyebrow">Step 2 · The details</span>
+              <h3>Tap through to see the post, the rule, and the fix</h3>
+              <p>No guessing. TOSbot shows the exact post it flagged, quotes the specific clause it may violate, and gives you a straightforward recommendation.</p>
+              <ul>
+                <li>Your post snippet, side by side with the platform's rule</li>
+                <li>Clear risk level and what enforcement usually looks like</li>
+                <li>Delete right from the app, or jump to the post to edit</li>
+              </ul>
+            </div>
+            <div class="walk-phone">
+              <div class="phone" role="img" aria-label="TOSbot app detail screen showing a flagged reply, the X policy it may violate, and a Delete this post button">
+                <div class="phone-screen screen-app">
+                  <div class="phone-island"></div>
+                  <div class="app-nav"><span class="chev">‹</span> Alerts</div>
+                  <div class="app-body">
+                    <div class="risk-banner">
+                      <span class="risk-dot"></span>
+                      <div>
+                        <p class="risk-banner-title">High risk — X · Abusive Behavior</p>
+                        <p class="risk-banner-sub">Similar posts commonly receive visibility limits</p>
+                      </div>
+                    </div>
+
+                    <div class="app-card">
+                      <p class="app-card-label">Your reply · 12 min ago</p>
+                      <p class="post-snippet">"People like you deserve everything that's coming to you. Absolute waste of oxygen."</p>
+                      <p class="post-meta">Replying to @newsdesk · 3 views</p>
+                    </div>
+
+                    <div class="app-card">
+                      <p class="app-card-label">Rule it may violate</p>
+                      <p class="rule-quote">"You may not share abusive content, harass someone, or wish harm on individuals…"</p>
+                      <p class="rule-ref">X Rules → Abusive Behavior, §2</p>
+                    </div>
+
+                    <div class="app-card">
+                      <p class="app-card-label">Recommendation</p>
+                      <p class="reco"><strong>Delete this reply.</strong> It reads as wishing harm, which X's automated moderation flags aggressively — even for jokes.</p>
+                    </div>
+
+                    <div class="app-actions">
+                      <a class="app-btn app-btn-danger" href="#walkthrough" aria-label="Delete this post (demo)">Delete this post</a>
+                      <a class="app-btn app-btn-plain" href="#walkthrough" aria-label="View post on X (demo)">View post on X ↗</a>
+                    </div>
+                    <p class="app-footnote">Deleting now removes it before most enforcement reviews occur.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Pricing ============ -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Pricing</span>
+          <h2>Less than one coffee a month.</h2>
+          <p>A strike can cost you your audience, your income, or years of work. TOSbot costs $4.99.</p>
+        </div>
+        <div class="pricing-wrap">
+          <div class="price-card">
+            <div class="price-name">Private beta</div>
+            <div class="price-amount">$0 <span>/ while testing</span></div>
+            <p class="price-sub">Early access for waitlist members.</p>
+            <ul class="price-list">
+              <li>First look when the product is ready</li>
+              <li>Help shape alerts & platforms</li>
+              <li>No payment info to join the list</li>
+              <li>Honest updates — we won't pretend it's live</li>
+            </ul>
+            <a class="btn btn-ghost js-waitlist-cta" href="#waitlist">Join the waitlist</a>
+          </div>
+          <div class="price-card featured">
+            <span class="price-flag">Planned price</span>
+            <div class="price-name">TOSbot Monthly</div>
+            <div class="price-amount">$4.99 <span>/ month</span></div>
+            <p class="price-sub">Hypothesis for launch — not billing yet.</p>
+            <ul class="price-list">
+              <li>Real-time scanning across all your accounts</li>
+              <li>Instant push alerts with rule citations</li>
+              <li>One-tap delete & direct post links</li>
+              <li>Continuously updated platform rulebooks</li>
+              <li>Cancel anytime — no lock-in</li>
+            </ul>
+            <a class="btn btn-primary js-waitlist-cta" href="#waitlist">Get notified at launch</a>
+          </div>
+        </div>
+        <p class="price-foot">Prices are a launch hypothesis in USD. Product is not live yet — join the waitlist and we'll email you when private beta opens. Expect a free trial period at launch.</p>
+      </div>
+    </section>
+
+    <!-- ============ Social proof ============ -->
+    <section class="section section-soft" id="proof">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Early users</span>
+          <h2>Peace of mind, in their words.</h2>
+        </div>
+        <div class="quotes-grid">
+          <div class="quote-card">
+            <div class="quote-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="quote-text">"I got flagged for a reply I'd completely forgotten about. Deleted it in ten seconds from the app. That alone paid for a year."</p>
+            <div class="quote-who">
+              <span class="quote-avatar" style="background:#6366f1">JM</span>
+              <div>
+                <div class="quote-name">Jordan M.</div>
+                <div class="quote-role">Streamer · beta tester</div>
+              </div>
+            </div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="quote-text">"My whole income runs through my accounts. TOSbot is the smoke detector I didn't know these platforms needed."</p>
+            <div class="quote-who">
+              <span class="quote-avatar" style="background:#059669">AR</span>
+              <div>
+                <div class="quote-name">Alexis R.</div>
+                <div class="quote-role">Creator, 120k followers · beta tester</div>
+              </div>
+            </div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="quote-text">"It doesn't nag. Weeks of silence, then one alert that genuinely mattered. That's exactly how a safety tool should behave."</p>
+            <div class="quote-who">
+              <span class="quote-avatar" style="background:#d97706">SK</span>
+              <div>
+                <div class="quote-name">Sam K.</div>
+                <div class="quote-role">Small business owner · beta tester</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="quotes-note">Illustrative quotes for the problem we hear from creators — not live product reviews. Replace with real beta quotes after launch.</p>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions, answered.</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Which platforms does TOSbot support?</summary>
+            <div class="faq-body">
+              <p>X (Twitter), Instagram, TikTok, and YouTube at launch, with more platforms on the roadmap. You can connect as many accounts as you like on a single subscription.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Can TOSbot post, edit, or delete things without me?</summary>
+            <div class="faq-body">
+              <p>Never automatically. TOSbot is read-only by default. The "delete this post" button acts only when you tap it, and only where the platform's API allows deletion. Otherwise we deep-link you straight to the post so you can handle it yourself.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Does TOSbot read my DMs or private messages?</summary>
+            <div class="faq-body">
+              <p>No. TOSbot only analyzes your own public posts and replies — the content platforms actually moderate for TOS enforcement. DMs are out of scope, full stop.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>How accurate are the alerts?</summary>
+            <div class="faq-body">
+              <p>TOSbot is tuned to be quiet. It flags posts that match the patterns platforms demonstrably enforce against — not every spicy opinion. You'll see the exact rule cited with each alert, so you can always judge for yourself. The final call is always yours.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Will this stop me from ever getting banned?</summary>
+            <div class="faq-body">
+              <p>No tool can promise that — platforms make the final call, and their enforcement isn't fully predictable. What TOSbot does is close the biggest gap: risky posts sitting live for days because you didn't realize they were risky. Early awareness is your best defense.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Is TOSbot available today?</summary>
+            <div class="faq-body">
+              <p>Not yet — we're validating demand with a private beta waitlist first. Join the list and we'll email you when access opens. At launch we expect a free trial, then about $4.99/month if you stick around.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>What happens after the free trial (at launch)?</summary>
+            <div class="faq-body">
+              <p>Plan: 14 days with features unlocked and no surprise charges. Near the end we'll ask if you want to continue around $4.99/month. If you don't, monitoring simply stops.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>What do you do with my data?</summary>
+            <div class="faq-body">
+              <p>We analyze your public posts to protect your account — that's it. We don't sell data, we don't build ad profiles, and you can disconnect an account or delete your TOSbot data at any time. See our <a href="privacy.html">privacy policy</a>.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Final CTA / Waitlist ============ -->
+    <section class="cta-final" id="waitlist">
+      <div class="container">
+        <h2>Your next post shouldn't be a gamble.</h2>
+        <p class="cta-sub">TOSbot isn't live yet. Join the private beta waitlist and we'll notify you the moment access opens — no fake signup, no pretend product.</p>
+        <div class="cta-form-wrap">
+          <a class="btn btn-light btn-lg js-waitlist-cta" href="#waitlist">Join the private beta waitlist</a>
+          <p class="cta-fine">Get notified when TOSbot opens. Planned ~$4.99/mo after a free trial. No payment info to join the list.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <a class="footer-brand" href="#top">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" width="26" height="26">
+            <rect x="4" y="4" width="56" height="56" rx="14" fill="#4f46e5"/>
+            <path d="M32 13 L49 20.5 V32 C49 42.5 42 49.8 32 53 C22 49.8 15 42.5 15 32 V20.5 Z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/>
+            <path d="M24.5 32.5 L30 38 L40 26.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          TOSbot
+        </a>
+        <ul class="footer-links">
+          <li><a href="#how">How it works</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-fine">
+        <p>© 2026 TOSbot. All rights reserved.</p>
+        <p>TOSbot is an independent service and is not affiliated with or endorsed by X Corp., Meta, TikTok, Google, or any social platform. Alerts are informational and not legal advice; platforms make all final enforcement decisions.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
