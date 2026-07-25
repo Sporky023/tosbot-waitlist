@@ -62,3 +62,11 @@ Manual: push **contents of this `site/` directory** to repo root of
 - Branding is **TOSbot** (not TossBot).
 - Pricing cards state the $4.99/mo figure as a **hypothesis**, not live billing.
 - Testimonials are illustrative placeholders until real beta quotes exist.
+
+## Landing position experiment (v2)
+
+**Intent:** Hold “private beta / waitlist” language and the signup button until the **bottom** of the page so visitors evaluate TOSbot as a product first (“do I want this?”), not as a business idea early.
+
+- Hero + nav CTAs → product explore (`See how it works`, `View pricing`, `Get started`)
+- Pricing mid-page → product pricing only (no waitlist card)
+- **Only** final `#waitlist` section uses `.js-waitlist-cta` / “Join the private beta”
