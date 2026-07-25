@@ -15,6 +15,12 @@
   var WAITLIST_MAILTO =
     "mailto:cecilassists@gmail.com?subject=TOSbot%20waitlist&body=Please%20add%20me%20to%20the%20TOSbot%20private%20beta%20waitlist.%0A%0AName%3A%20%0AEmail%3A%20%0APlatforms%20I%20care%20about%20(X%2FInstagram%2FTikTok%2FYouTube)%3A%20";
 
+  // Google Forms entry IDs for prefill (not true hidden fields; values show but are auto-filled).
+  // Landing page URL → entry.1089773560
+  // UTM / traffic params → entry.2079622525
+  var FORM_ENTRY_LANDING = "1089773560";
+  var FORM_ENTRY_UTM = "2079622525";
+
   function isLiveFormUrl(url) {
     if (!url) return false;
     var u = String(url).trim();
@@ -22,8 +28,50 @@
     return /^https?:\/\//i.test(u);
   }
 
+  function currentLandingUrl() {
+    try {
+      // pathname + search so custom domain vs GH Pages vs campaign querystring all show up
+      return window.location.origin + window.location.pathname + window.location.search;
+    } catch (err) {
+      return "";
+    }
+  }
+
+  function currentUtmBlob() {
+    try {
+      var p = new URLSearchParams(window.location.search || "");
+      var keys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "fbclid", "ref"];
+      var parts = [];
+      keys.forEach(function (k) {
+        var v = p.get(k);
+        if (v) parts.push(k + "=" + v);
+      });
+      return parts.join("&");
+    } catch (err) {
+      return "";
+    }
+  }
+
   function waitlistHref() {
-    return isLiveFormUrl(WAITLIST_FORM_URL) ? String(WAITLIST_FORM_URL).trim() : WAITLIST_MAILTO;
+    if (!isLiveFormUrl(WAITLIST_FORM_URL)) return WAITLIST_MAILTO;
+    var base = String(WAITLIST_FORM_URL).trim();
+    // Normalize to viewform and append entry prefill params
+    try {
+      var u = new URL(base);
+      // keep path; Google accepts entry.X on viewform
+      if (!/viewform/i.test(u.pathname)) {
+        // if someone pasted a shorter form link, still append params
+      }
+      var landing = currentLandingUrl();
+      var utm = currentUtmBlob();
+      if (landing) u.searchParams.set("entry." + FORM_ENTRY_LANDING, landing);
+      if (utm) u.searchParams.set("entry." + FORM_ENTRY_UTM, utm);
+      // usp=pp_url is Google's prefill marker; harmless if present twice conceptually
+      if (!u.searchParams.has("usp")) u.searchParams.set("usp", "pp_url");
+      return u.toString();
+    } catch (err) {
+      return base;
+    }
   }
 
   function openWaitlist(e) {
