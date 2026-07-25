@@ -9,7 +9,7 @@
 
   // === ONE-LINE CONFIG =====================================================
   // Example: "https://docs.google.com/forms/d/e/XXXX/viewform"
-  var WAITLIST_FORM_URL = "";
+  var WAITLIST_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSftFWNiNiCeZAnIQvex22QlY-2KmnH2K28rReukRJr_VG6MhQ/viewform";
   // ========================================================================
 
   var WAITLIST_MAILTO =
